@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/jquery-1.9.1.min.js"></script>
+        <script src="appjs.js"></script>
+        <style>
+            .menu-container{
+                width:200px;
+                height:auto;
+                background:#333333;
+                color:white;
+            }
+            .menu-container ul{
+                display:inline-block;
+                background:gray;
+                -webkit-padding-start: 0px;
+                box-shadow: 0px 0px 5px 1px grey;
+            }
+            .menu-container ul li{
+                display:block;
+            }
+            
+            li ul{
+                position:absolute;
+                top:0px;
+                left: 99%;
+            }
+            ul li{
+                position:relative;
+                width:150px;
+                font-size: 18px;
+                padding: 5px;
+                
+            }
+            
+            ul li:hover{
+                background:lightgray;
+            }
+            
+            .menu-container>ul ul{
+                display:none;
+            }
+            
+            
+            ul li:not(first-child){
+                color:white;
+            }
+            /*.menu-container>ul>li:before{
+                content : '';
+            }*/
+            
+            
+        </style>
+    </head>
+    <body ng-app="myApp">
+        <div class="menu-container">
+            <ul>
+                <li>Search Engine
+                    <ul>
+                        <li><a href="http://www.google.com">Google</a></li>
+                        <li><a href="http://www.yahoo.com">Yahoo</a></li>
+                        <li><a href="http://www.being.com">Being</a></li>
+                    </ul>
+                </li>
+                
+                <li>Games
+                    <ul>
+                        <li>Gameloft
+                            <ul>
+                                <li>Temple Run</li>
+                                <li>Hill Climb Racing</li>
+                                <li>Fruits Cutter</li>
+                            </ul>
+                        </li>
+                        <li>itch
+                            <ul>
+                                <li>Wagh Bakri</li>
+                                <li>4096</li>
+                                <li>Road Ranger</li>
+                            </ul>
+                        </li>
+                        <li>King
+                            <ul>
+                            <li>Candy Crash</li>
+                            <li>Gum Crash</li>
+                            <li>Game Ball</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
