@@ -4,7 +4,7 @@
         $(".menu-container li").css("cursor", "pointer");
         $(".menu-container li").each(function(){
            if($(this).children("ul").length>0){
-               $(this).append("<span style='float:right'>></span>");
+               $(this).append("<span style='float:right; margin-right: 10px;' class='ion-chevron-right'></span>");
            }
         });
         
